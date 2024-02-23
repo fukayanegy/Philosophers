@@ -6,7 +6,7 @@
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 17:28:14 by etakaham          #+#    #+#             */
-/*   Updated: 2024/02/23 17:48:09 by etakaham         ###   ########.fr       */
+/*   Updated: 2024/02/23 18:16:29 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <stdbool.h>
+# include <time.h>
+# include <pthread.h>
 # include "./function.h"
 
 #endif
