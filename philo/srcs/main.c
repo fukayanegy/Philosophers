@@ -6,11 +6,14 @@
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 16:32:03 by etakaham          #+#    #+#             */
-/*   Updated: 2024/02/23 16:32:12 by etakaham         ###   ########.fr       */
+/*   Updated: 2024/02/23 17:29:13 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+# include "../headers/philosophers.h"
+
 int	main(void)
 {
+	printf("start.\n");
 	return (0);
 }
