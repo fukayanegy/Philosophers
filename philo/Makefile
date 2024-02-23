@@ -6,7 +6,7 @@
 #    By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/23 17:28:22 by etakaham          #+#    #+#              #
-#    Updated: 2024/02/23 17:50:53 by etakaham         ###   ########.fr        #
+#    Updated: 2024/02/23 18:08:50 by etakaham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS		= -Wall -Wextra -Werror
 SANITIZE	= -fsanitize=address -g
 RE			= rm -f
 MAIN		= srcs/main.c
-SRCS		= srcs/utils/ft_atoi.c
+SRCS		= srcs/utils/ft_atoi.c srcs/utils/ft_isdigit.c
 OBJS		= $(SRCS:.c=.o)
 
 all:$(NAME)
