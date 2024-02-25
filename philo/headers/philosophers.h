@@ -6,7 +6,7 @@
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 17:28:14 by etakaham          #+#    #+#             */
-/*   Updated: 2024/02/25 19:01:00 by etakaham         ###   ########.fr       */
+/*   Updated: 2024/02/25 21:15:52 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@
 # include <sys/time.h>
 # include <pthread.h>
 # include "./function.h"
+# include "./types.h"
 
 #endif

@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_log.c                                        :+:      :+:    :+:   */
+/*   types.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/25 18:48:32 by etakaham          #+#    #+#             */
-/*   Updated: 2024/02/25 21:46:38 by etakaham         ###   ########.fr       */
+/*   Created: 2024/02/25 21:16:09 by etakaham          #+#    #+#             */
+/*   Updated: 2024/02/25 21:36:39 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../headers/philosophers.h"
+#ifndef TYPES_H
+# define TYPES_H
 
-static int	print_philo(t_philo *philo)
+typedef struct s_philo
 {
-	if (philo == NULL)
-		return (1);
-	printf("%d\n", philo->id);
-	return (0);
-}
+	int				id;
+	int				status;
+	bool			l_hand;
+	bool			r_hand;
+	struct t_philo	*l_philo;
+	struct t_philo	*r_philo;
+}					t_philo;
 
-int	print_log(void)
-{
-	struct timeval	time1;
-	t_philo			*philo;
-
-	philo = init_philo(0);
-	gettimeofday(&time1, NULL);
-	print_philo(philo);
-	printf("%d\n", (int)time1.tv_sec);
-	return (0);
-}
+#endif

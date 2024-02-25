@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_log.c                                        :+:      :+:    :+:   */
+/*   init_philo.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/25 18:48:32 by etakaham          #+#    #+#             */
-/*   Updated: 2024/02/25 21:46:38 by etakaham         ###   ########.fr       */
+/*   Created: 2024/02/25 21:40:05 by etakaham          #+#    #+#             */
+/*   Updated: 2024/02/25 21:43:19 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../../headers/philosophers.h"
 
-static int	print_philo(t_philo *philo)
+t_philo	*init_philo(int	id)
 {
+	t_philo	*philo;
+
+	philo = malloc(sizeof(philo));
 	if (philo == NULL)
-		return (1);
-	printf("%d\n", philo->id);
-	return (0);
-}
-
-int	print_log(void)
-{
-	struct timeval	time1;
-	t_philo			*philo;
-
-	philo = init_philo(0);
-	gettimeofday(&time1, NULL);
-	print_philo(philo);
-	printf("%d\n", (int)time1.tv_sec);
-	return (0);
+		exit(0);
+	philo->id = id;
+	return (philo);
 }
