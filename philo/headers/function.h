@@ -6,7 +6,7 @@
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 17:44:49 by etakaham          #+#    #+#             */
-/*   Updated: 2024/02/23 18:08:59 by etakaham         ###   ########.fr       */
+/*   Updated: 2024/02/25 18:49:58 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@
 /*utils*/
 int		ft_atoi(const char *str);
 bool	ft_isdigit(const char *str);
+int		print_log(void);
 
 #endif

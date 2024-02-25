@@ -6,7 +6,7 @@
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 16:32:03 by etakaham          #+#    #+#             */
-/*   Updated: 2024/02/23 18:12:18 by etakaham         ###   ########.fr       */
+/*   Updated: 2024/02/25 19:00:11 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	main(int argc, char **argv)
 
 	if (argc != 5 && argc != 6)
 	{
-		printf("hoge\n");
 		return (1);
 	}
 	i = 1;
@@ -39,5 +38,6 @@ int	main(int argc, char **argv)
 	time_to_die = ft_atoi(argv[2]);
 	time_to_eat = ft_atoi(argv[3]);
 	time_to_sleep = ft_atoi(argv[4]);
+	print_log();
 	return (0);
 }

@@ -19,3 +19,127 @@ time_to_die (ミリ秒)]：
 - 各哲学者は1からnumber_of_philosophersまでの番号を持ちます。  
 - 哲学者番号1は哲学者番号[number_of_philosophers]の隣に座ります。  
 その他の哲学者番号Nは、哲学者番号N - 1と哲学者番号N + 1の間に位置する。  
+
+# Ecternal functions
+1. memset
+2. printf
+3. malloc
+4. free
+5. write
+6. usleep
+7. gettimeofday
+8. pthread_create
+9. pthread_detach
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
