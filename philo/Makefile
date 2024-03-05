@@ -16,7 +16,7 @@ CFLAGS		= -Wall -Wextra -Werror
 SANITIZE	= -fsanitize=address -g
 RE			= rm -f
 MAIN		= srcs/main.c
-SRCS		= srcs/utils/actions.c srcs/utils/init.c srcs/utils/thread.c srcs/utils/utils.c
+SRCS		= srcs/utils/actions.c srcs/utils/init.c srcs/utils/threads.c srcs/utils/utils.c
 OBJS		= $(SRCS:.c=.o)
 
 all:$(NAME)
