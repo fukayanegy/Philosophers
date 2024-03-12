@@ -6,7 +6,7 @@
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 16:32:03 by etakaham          #+#    #+#             */
-/*   Updated: 2024/03/12 18:00:37 by etakaham         ###   ########.fr       */
+/*   Updated: 2024/03/12 18:27:31 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	main(int argc, char **argv)
 {
 	t_data	data;
 
-	if (argc < 5 || argc > 6)
+	if (!(argc == 5 || argc == 6))
 		return (1);
 	if (input_checker(argv))
 		return (1);

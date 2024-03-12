@@ -6,7 +6,7 @@
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 18:00:31 by etakaham          #+#    #+#             */
-/*   Updated: 2024/03/12 18:00:33 by etakaham         ###   ########.fr       */
+/*   Updated: 2024/03/12 18:20:52 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int	input_checker(char **argv)
 				j++;
 				continue ;
 			}
-			if ((argv[i][j] < 48 || argv[i][j] > 57))
+			if ((argv[i][j] < '0' || argv[i][j] > '9'))
 				return (error(ERR_IN_1, NULL));
 			j++;
 		}
