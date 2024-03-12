@@ -1,27 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   actions.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/12 18:00:04 by etakaham          #+#    #+#             */
+/*   Updated: 2024/03/12 18:00:05 by etakaham         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 # include "../../headers/philosophers.h"
 
-u_int64_t	get_time(void)
+unsigned int	get_time(void)
 {
 	struct timeval	tv;
 
 	if (gettimeofday(&tv, NULL))
 		return (error("gettimeofday() FAILURE\n", NULL));
-	return ((tv.tv_sec * (u_int64_t)1000) + (tv.tv_usec / 1000));
+	return ((tv.tv_sec * (unsigned int)1000) + (tv.tv_usec / 1000));
 }
 
 void	messages(char *str, t_philo *philo)
 {
-	u_int64_t	time;
+	unsigned int	time;
 
 	pthread_mutex_lock(&philo->data->write);
 	time = get_time() - philo->data->start_time;
 	if (ft_strcmp(DIED, str) == 0 && philo->data->dead == 0)
 	{
-		printf("%lu %d %s\n", time, philo->id, str);
+		printf("%llu %d %s\n", time, philo->id, str);
 		philo->data->dead = 1;
 	}
 	if (!philo->data->dead)
-		printf("%lu %d %s\n", time, philo->id, str);
+		printf("%llu %d %s\n", time, philo->id, str);
 	pthread_mutex_unlock(&philo->data->write);
 }
 

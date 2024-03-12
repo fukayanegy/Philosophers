@@ -6,7 +6,7 @@
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 17:28:14 by etakaham          #+#    #+#             */
-/*   Updated: 2024/02/23 17:48:09 by etakaham         ###   ########.fr       */
+/*   Updated: 2024/03/12 17:49:55 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,16 +58,16 @@ typedef struct s_philo
 
 typedef struct s_data
 {
-	pthread_t		*tid;
-	int				philo_num;
-	int				meals_nb;
-	int				dead;
-	int				finished;
-	t_philo			*philos;
-	u_int64_t		death_time;
-	u_int64_t		eat_time;
-	u_int64_t		sleep_time;
-	u_int64_t		start_time;
+	pthread_t			*tid;
+	int					philo_num;
+	int					meals_nb;
+	int					dead;
+	int					finished;
+	t_philo				*philos;
+	unsigned int		death_time;
+	unsigned int		eat_time;
+	unsigned int		sleep_time;
+	unsigned int		start_time;
 	pthread_mutex_t	*forks;
 	pthread_mutex_t	lock;
 	pthread_mutex_t	write;
