@@ -6,24 +6,24 @@
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 18:00:04 by etakaham          #+#    #+#             */
-/*   Updated: 2024/03/12 18:00:05 by etakaham         ###   ########.fr       */
+/*   Updated: 2024/03/12 18:10:08 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../../headers/philosophers.h"
 
-unsigned int	get_time(void)
+u_int64_t	get_time(void)
 {
 	struct timeval	tv;
 
 	if (gettimeofday(&tv, NULL))
 		return (error("gettimeofday() FAILURE\n", NULL));
-	return ((tv.tv_sec * (unsigned int)1000) + (tv.tv_usec / 1000));
+	return ((tv.tv_sec * (u_int64_t)1000) + (tv.tv_usec / 1000));
 }
 
 void	messages(char *str, t_philo *philo)
 {
-	unsigned int	time;
+	u_int64_t	time;
 
 	pthread_mutex_lock(&philo->data->write);
 	time = get_time() - philo->data->start_time;
