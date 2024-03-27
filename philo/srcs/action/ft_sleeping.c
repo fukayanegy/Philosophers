@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_sleeping.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 16:32:03 by etakaham          #+#    #+#             */
-/*   Updated: 2024/03/24 16:04:15 by etakaham         ###   ########.fr       */
+/*   Created: 2024/03/04 15:40:52 by etakaham          #+#    #+#             */
+/*   Updated: 2024/03/05 14:57:44 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../headers/philosophers.h"
+# include "../../headers/philosophers.h"
 
-// void	eating(t_philo *philo)
-// {
-// 	return ;
-// }
-
-int	main(int argc, char **argv)
+void	ft_sleeping(t_data *data)
 {
-	t_data data;
-
-	init_data(&data, argc, argv);
-	activate_thread(&data);
-	return (0);
+	usleep(data->time_to_sleep);
+	return ;
+	(void) data;
 }

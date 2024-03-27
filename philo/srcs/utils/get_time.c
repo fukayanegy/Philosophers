@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   get_time.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 16:32:03 by etakaham          #+#    #+#             */
-/*   Updated: 2024/03/24 16:04:15 by etakaham         ###   ########.fr       */
+/*   Created: 2024/03/27 16:22:11 by etakaham          #+#    #+#             */
+/*   Updated: 2024/03/27 16:22:12 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../headers/philosophers.h"
+# include "../../headers/philosophers.h"
 
-// void	eating(t_philo *philo)
-// {
-// 	return ;
-// }
-
-int	main(int argc, char **argv)
+unsigned int	get_time(void)
 {
-	t_data data;
+	struct timeval	time1;
+	unsigned int	time;
 
-	init_data(&data, argc, argv);
-	activate_thread(&data);
-	return (0);
+	gettimeofday(&time1, NULL);
+	time = (unsigned int)time1.tv_usec + ((unsigned int)time1.tv_sec % 1000) * 1000000;
+	return (time);
 }

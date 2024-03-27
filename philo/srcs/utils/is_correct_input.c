@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   is_correct_input.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 16:32:03 by etakaham          #+#    #+#             */
-/*   Updated: 2024/03/24 16:04:15 by etakaham         ###   ########.fr       */
+/*   Created: 2024/03/06 18:53:50 by etakaham          #+#    #+#             */
+/*   Updated: 2024/03/24 17:36:04 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../headers/philosophers.h"
+# include "../../headers/philosophers.h"
 
-// void	eating(t_philo *philo)
-// {
-// 	return ;
-// }
-
-int	main(int argc, char **argv)
+bool	is_correct_input(int argc, char **argv)
 {
-	t_data data;
+	int	i;
 
-	init_data(&data, argc, argv);
-	activate_thread(&data);
-	return (0);
+	if (!(argc == 5 || argc == 6))
+	{
+		printf("hoge\n");
+		return (false);
+	}
+	i = 0;
+	while (i < argc)
+	{
+		if (!ft_isdigit(argv[i]))
+		{
+			ft_error(ARGS_ERROR);
+			return (false);
+		}
+		i++;
+	}
+	return (true);
 }

@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   record_start_time.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/23 16:32:03 by etakaham          #+#    #+#             */
-/*   Updated: 2024/03/24 16:04:15 by etakaham         ###   ########.fr       */
+/*   Created: 2024/03/27 16:22:22 by etakaham          #+#    #+#             */
+/*   Updated: 2024/03/27 16:22:23 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../headers/philosophers.h"
+# include "../../headers/philosophers.h"
 
-// void	eating(t_philo *philo)
-// {
-// 	return ;
-// }
-
-int	main(int argc, char **argv)
+int	record_start_time(t_data *data)
 {
-	t_data data;
-
-	init_data(&data, argc, argv);
-	activate_thread(&data);
+	data->start_time = get_time();
 	return (0);
 }
