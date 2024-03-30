@@ -12,11 +12,6 @@
 
 # include "../headers/philosophers.h"
 
-// void	eating(t_philo *philo)
-// {
-// 	return ;
-// }
-
 int	main(int argc, char **argv)
 {
 	t_data data;

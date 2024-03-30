@@ -6,7 +6,7 @@
 /*   By: etakaham <etakaham@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 16:21:55 by etakaham          #+#    #+#             */
-/*   Updated: 2024/03/27 16:21:57 by etakaham         ###   ########.fr       */
+/*   Updated: 2024/03/27 17:01:33 by etakaham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ static void	*action(void *data_pointer)
 	t_philo	*philo;
 
 	philo = (t_philo *)data_pointer;
+	printf("==========id:%d\n==========", philo->id);
+	printf("\n");
 	return ((void *)0);
 }
 
